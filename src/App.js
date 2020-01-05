@@ -9,7 +9,7 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      mode:'welcome',
+      mode:'read',
       subject:{title:"WEB", sub:"World Wide Web!"},
       welcome:{title:'welcome',desc:'Hello, React!!'},
       contents :[
@@ -31,7 +31,22 @@ class App extends Component {
     }
     return (
       <div className="App">
-          <Subject title={this.state.subject.title} sub={this.state.subject.sub}></Subject>
+          {/*<Subject
+            title={this.state.subject.title}
+            sub={this.state.subject.sub}>
+          </Subject>*/}
+          <header>
+            <h1><a href="/" onClick={function(e){
+              //console.log(e);
+              e.preventDefault();//이벤트의 기본적인 동작을 막는다(a태그의 페이지 이동을 막았다)
+              //debugger;
+              //this.state.mode = 'welcome';
+              this.setState({
+                mode:'welcome'
+              });
+            }.bind(this)}>{this.state.subject.title}</a></h1>
+                {this.state.subject.sub}
+          </header>
           <Toc data={this.state.contents}></Toc>
           <Content title={_title} desc={_desc}></Content>
       </div>
