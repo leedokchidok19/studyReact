@@ -31,11 +31,17 @@ class App extends Component {
     }
     return (
       <div className="App">
-          {/*<Subject
+          <Subject
             title={this.state.subject.title}
-            sub={this.state.subject.sub}>
-          </Subject>*/}
-          <header>
+            sub={this.state.subject.sub}
+            onChangePage={function(){
+              this.setState({
+                mode:'welcome'
+              });
+            }.bind(this)}
+          >
+          </Subject>
+          {/*<header>
             <h1><a href="/" onClick={function(e){
               //console.log(e);
               e.preventDefault();//이벤트의 기본적인 동작을 막는다(a태그의 페이지 이동을 막았다)
@@ -46,7 +52,7 @@ class App extends Component {
               });
             }.bind(this)}>{this.state.subject.title}</a></h1>
                 {this.state.subject.sub}
-          </header>
+          </header>*/}
           <Toc data={this.state.contents}></Toc>
           <Content title={_title} desc={_desc}></Content>
       </div>
