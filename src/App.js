@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import Subject from "./components/Subject";
 import Toc from "./components/Toc";
-import Content from "./components/Content";
+import ReadContent from "./components/ReadContent";
+import CreateContent from "./components/CreateContent";
+import Control from "./components/Control";
 import Alarm from "./alarm/AlarmMain";
 import './App.css';
 
@@ -10,7 +12,7 @@ class App extends Component {
     super(props);
     this.state = {
       mode:'read',
-      selected_content_id:2,
+      selected_content_id:0,
       subject:{title:"WEB", sub:"World Wide Web!"},
       welcome:{title:'welcome',desc:'Hello, React!!'},
       contents :[
@@ -22,10 +24,11 @@ class App extends Component {
 
   }
   render(){
-    var _title, _desc = null;
+    var _title, _desc, _artcle = null;
     if(this.state.mode === 'welcome'){
       _title = this.state.welcome.title;
       _desc = this.state.welcome.desc;
+      _artcle = <ReadContent title={_title} desc={_desc}></ReadContent>
     }else if (this.state.mode === 'read') {
       var i = 0;
       while(i<this.state.contents.length){
@@ -37,6 +40,9 @@ class App extends Component {
         }
         i = i + 1;
       }
+      _artcle = <ReadContent title={_title} desc={_desc}></ReadContent>
+    }else if (this.state.mode === 'create') {
+      _artcle = <CreateContent></CreateContent>
     }
     return (
       <div className="App">
@@ -72,7 +78,15 @@ class App extends Component {
             data={this.state.contents}
             >
           </Toc>
-          <Content title={_title} desc={_desc}></Content>
+          <Control
+                  onChangeMode={function(_mode){
+                    this.setState({
+                      mode:_mode
+                    })
+                  }.bind(this)}
+          >
+          </Control>
+          {_artcle}
       </div>
     );
   }
