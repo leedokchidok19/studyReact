@@ -1,3 +1,11 @@
+## 생활코딩 참고
+
+리액트 수업 - 생활코딩
+https://www.opentutorials.org/module/4058
+리액트 수업 - 생활코딩(유튜브)
+https://www.youtube.com/watch?v=XMb0w3KMw00&list=PLuHgQVnccGMCRv6f8H9K5Xwsdyg4sFSdi&index=1
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
