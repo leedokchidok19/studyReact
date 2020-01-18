@@ -2,7 +2,7 @@
   "name": "reactworkspace",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://leedokchidok19.github.io/studyReact/",
+  "homepage": "https://leedokchidok19.github.io/studyReact/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
@@ -16,8 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "npm run build &&gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,5 +32,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
