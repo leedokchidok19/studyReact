@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Romdal from "./romdal/Romdal";
 import Subject from "./components/Subject";
 import Toc from "./components/Toc";
 import ReadContent from "./components/ReadContent";
@@ -101,6 +102,7 @@ class App extends Component {
 
     return (
       <div className="App">
+          <Romdal />
           <Subject
             title={this.state.subject.title}
             sub={this.state.subject.sub}

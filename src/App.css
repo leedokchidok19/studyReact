@@ -1,4 +1,9 @@
+#root{
+  width: 100%;
+}
 .App {
   position: relative;
-  left: 10px;
+  width: 100%;
+  height: auto;
+  left: 45%;
 }

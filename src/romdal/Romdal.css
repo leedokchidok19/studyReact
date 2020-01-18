@@ -1,0 +1,15 @@
+#romdal{
+  width: 100%;
+  text-align: center;
+  color: rgb(35,177,200);
+}
+#romdal a:hover,#romdal a:visited,#romdal a:active{/*> 사이에 없는 순수 부보자식관계에 사용*/
+  color: rgb(35,177,200);
+}
+.romdal-desc{
+  width: calc(100% - 50px);
+  text-decoration: none;
+}
+.hidden-box{
+  display: none;
+}
