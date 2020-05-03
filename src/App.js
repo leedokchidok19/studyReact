@@ -162,6 +162,7 @@ class App extends Component {
                   }
           }.bind(this)}></Control>
           {this.getContent()} {/*{_artcle}과 동일*/}
+          <Alarm />
       </div>
     );
   }
